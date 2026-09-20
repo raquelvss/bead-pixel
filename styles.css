@@ -4,9 +4,9 @@ body {
 h2 {
     background-color: rgb(86, 177, 252);
     font-size: large;
-    color: rgb(253, 216, 242); }
+    color: white; }
 p {
-    color:rgb(1, 37, 105);
+    color:rgb(0, 12, 32);
 }
 ul {
     color: aliceblue;
