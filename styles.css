@@ -1,10 +1,10 @@
 body {
-    background-color: #FDF8FC;
+    background-color: #fabfdd;
 }
 h2 {
-    background-color: rgb(9, 127, 223);
+    background-color: rgb(122, 188, 241);
     font-size: large;
-color: rgb(242, 245, 250); }
+color: rgb(0, 27, 70); }
 p {
 color:rgb(0, 0, 0);
 }
@@ -32,7 +32,7 @@ button:hover {
 }
 .titulo-principal {
     font-weight: bold;
-    color: rgb(0, 70, 136);
+    color: rgb(3, 120, 230);
     text-align: center;
     letter-spacing: 3px;
 }
