@@ -1,81 +1,145 @@
 <!DOCTYPE html>
+
 <html>
     <head>
         <link rel="stylesheet" href="styles.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        Bead Pixel
-    </title>
-    </head>
-    <body> 
-     <h1 class="titulo-principal">Bead Pixel</h1>
-        <h2 class="recepção">Bem-vindo(a) a minha loja virtual!</h2>
-      <p>A Bead Pixel é uma loja que oferece uma ampla variedade de modelos de chaveiros feitos inteiramente de Hama Beads (material que compõe os chaveiros).</p>
-       <h2>Nossos produtos:</h2>
-<ul>
-    <li>Snoop personalizado 
-        <br>
-        <img src="Imagens/Snoop.foto.jpeg">
-        <br>
-        <strong class="preco">R$5,00</strong>
-        <br>
-        <button onclick="abrirFormulario('Snoop personalizado', 'R$5,00')">
-    Fazer pedido
-</button>
-    </li>
-    <li>Stitch (com tamanho personalizado) 
-        <br>
-        <img src="Imagens/foto_stitch_AI.jpg">
-        <br>
-        <strong class="preco">R$5,00 - R$8,00</strong>
-        <br>
-        <button onclick="abrirFormulario('Stitch (com tamanho personalizado)', 'R$5,00 - R$8,00')">
-    Fazer pedido
-</button>
-    </li>
-    <li>Laço (cores variadas) 
-         <br>
-        <img src= "Imagens/Laços.png">
-        <br>
-        <strong class="preco">R$5,00</strong>
-        <br>
-        <button onclick="abrirFormulario('Laço (cores variadas)', 'R$5,00')">
-    Fazer pedido
-</button>
-    </li>
-</ul>
-<div id="formulario-pedido" class="formulario-escondido">
 
-    <div class="caixa-formulario">
+```
+    <title>Bead Pixel</title>
+</head>
 
-        <h2>Fazer pedido</h2>
+<body>
 
-        <p id="produto-escolhido"></p>
+    <h1 class="titulo-principal">Bead Pixel</h1>
 
-        <label for="nome">Seu nome:</label>
-        <input type="text" id="nome" placeholder="Digite seu nome">
+    <h2 class="recepção">Bem-vindo(a) a minha loja virtual!</h2>
 
-        <label for="quantidade">Quantidade:</label>
-        <input type="number" id="quantidade" min="1" value="1">
+    <p>
+        A Bead Pixel é uma loja que oferece uma ampla variedade de modelos
+        de chaveiros feitos inteiramente de Hama Beads (material que compõe
+        os chaveiros).
+    </p>
 
-        <div id="opcao-produto"></div>
-        
-        <label for="observacao">Observações:</label>
-        <textarea id="observacao" placeholder="Escreva os detalhes do pedido"></textarea>
+    <h2>Nossos produtos:</h2>
 
-        <button onclick="enviarPedido()" class="botao-enviar">
-            Enviar pedido
-        </button>
+    <ul>
 
-        <button onclick="fecharFormulario()" class="botao-fechar">
-            Fechar
-        </button>
+        <li>
+            Snoop (tamanho personalizável)
+            <br>
 
-        <p id="mensagem-pedido"></p>
+            <img src="Imagens/Snoop.foto.jpeg">
+            <br>
+
+            <strong class="preco">R$5,00</strong>
+            <br>
+
+            <button onclick="abrirFormulario('Snoop personalizado', 'R$5,00')">
+                Fazer pedido
+            </button>
+        </li>
+
+
+        <li>
+            Stitch (com tamanho personalizado)
+            <br>
+
+            <img src="Imagens/foto_stitch_AI.jpg">
+            <br>
+
+            <strong class="preco">R$5,00 - R$8,00</strong>
+            <br>
+
+            <button onclick="abrirFormulario('Stitch (com tamanho personalizável)', 'R$5,00 - R$8,00')">
+                Fazer pedido
+            </button>
+        </li>
+
+
+        <li>
+            Laço (cores variadas)
+            <br>
+
+            <img src="Imagens/Laços.png">
+            <br>
+
+            <strong class="preco">R$5,00</strong>
+            <br>
+
+            <button onclick="abrirFormulario('Laço (cores variadas)', 'R$5,00')">
+                Fazer pedido
+            </button>
+        </li>
+
+    </ul>
+
+
+    <div id="formulario-pedido" class="formulario-escondido">
+
+        <div class="caixa-formulario">
+
+            <h2>Fazer pedido</h2>
+
+            <p id="produto-escolhido"></p>
+
+
+            <label for="nome">Seu nome:</label>
+
+            <input
+                type="text"
+                id="nome"
+                placeholder="Digite seu nome"
+            >
+
+
+            <label for="quantidade">Quantidade:</label>
+
+            <input
+                type="number"
+                id="quantidade"
+                min="1"
+                value="1"
+            >
+
+
+            <div id="opcao-produto"></div>
+
+
+            <label for="observacao">Observações:</label>
+
+            <textarea
+                id="observacao"
+                placeholder="Escreva os detalhes do pedido"
+            ></textarea>
+
+
+            <button
+                onclick="enviarPedido()"
+                class="botao-enviar"
+            >
+                Enviar pedido
+            </button>
+
+
+            <button
+                onclick="fecharFormulario()"
+                class="botao-fechar"
+            >
+                Fechar
+            </button>
+
+
+            <p id="mensagem-pedido"></p>
+
+        </div>
 
     </div>
 
-</div>
-<script src="script.js"></script>
-    </body>
+
+    <script src="script.js"></script>
+
+</body>
+```
+
 </html>

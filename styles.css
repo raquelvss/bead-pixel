@@ -1,14 +1,18 @@
 body {
     background-color: #b6d5f5;
 }
+
 h2 {
     background-color: rgb(86, 177, 252);
     font-size: large;
-    color: white; }
+    color: white;
+}
+
 p {
-    color:rgb(0, 12, 32);
+    color: rgb(0, 12, 32);
     background-color: rgb(255, 255, 255);
 }
+
 ul {
     color: aliceblue;
     text-align: center;
@@ -17,68 +21,62 @@ ul {
     justify-content: center;
     list-style: none;
 }
-button{
+
+button {
     font-family: 'Times New Roman', Times, serif;
-color: white;
-background-color: rgb(27, 117, 252);
-border: 3px double rgb(243, 149, 235);
-border-radius: 10px;
-padding: 8px;
-margin: 10px;
-transition: all 0.3s;
+    color: white;
+    background-color: rgb(27, 117, 252);
+    border: 3px double rgb(243, 149, 235);
+    border-radius: 10px;
+    padding: 8px;
+    margin: 10px;
+    transition: all 0.3s;
 }
+
 button:hover {
     background-color: rgb(50, 156, 241);
     transform: scale(1.2);
 }
+
 .titulo-principal {
     font-weight: bold;
     color: rgb(247, 120, 198);
     text-align: center;
     letter-spacing: 3px;
 }
+
 .recepção {
-color: rgb(246, 245, 248);
-font-size: larger;
+    color: rgb(246, 245, 248);
+    font-size: larger;
 }
+
 li {
     color: rgb(0, 92, 167);
-background-color:white;
-padding: 20px;
-margin: 0;
-border-radius: 15px;
-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    padding: 20px;
+    margin: 0;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
+
 .preco {
     color: rgb(9, 127, 223);
     font-size: 20px;
     font-weight: bold;
     margin: 10px;
 }
+
 img {
-width: 200px;
-height: 200px;
-object-fit: cover;}
-@media (max-width: 700px) {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
 
-    ul {
-        flex-direction: column;
-        gap: 30px;
-        align-items: center;
-        justify-content: center;
-        padding: 0;
-        margin: 0 auto;
-        width: 100%;
-    }
 
-    img {
-        width: 170px;
-        height: 170px;
-    }
+/* ========================= */
+/* FORMULÁRIO DE PEDIDO */
+/* ========================= */
 
-    li {
-        width: 240px;
-    }
 .formulario-escondido {
     display: none;
 }
@@ -156,4 +154,31 @@ object-fit: cover;}
     color: rgb(9, 127, 223);
     font-weight: bold;
     text-align: center;
+}
+
+
+/* ========================= */
+/* CELULAR */
+/* ========================= */
+
+@media (max-width: 700px) {
+
+    ul {
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    img {
+        width: 170px;
+        height: 170px;
+    }
+
+    li {
+        width: 240px;
+    }
 }
