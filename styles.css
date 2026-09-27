@@ -154,14 +154,10 @@ img {
     font-weight: bold;
     text-align: center;
 }
-
-
 /* ========================= */
 /* CELULAR */
 /* ========================= */
-
 @media (max-width: 700px) {
-
     ul {
         ul {
     flex-direction: row;
@@ -180,4 +176,5 @@ img {
     li {
         width: 240px;
     }
+}
 }
