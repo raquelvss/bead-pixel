@@ -154,30 +154,43 @@ img {
 /* CELULAR */
 @media (max-width: 700px) {
     ul {
-        ul {
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 20px;
-    align-items: center;
     justify-content: center;
+    align-items: stretch;
     padding: 0;
-    }
-
-    img {
-        width: 170px;
-        height: 170px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
     }
 
     li {
-        width: 240px;
+        width: calc(50% - 30px);
+        box-sizing: border-box;
+        padding: 15px 10px;
+        margin: 0;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        max-width: 170px;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+    }
+
+    button {
+        padding: 7px;
+        margin: 8px 2px;
+        font-size: 14px;
     }
 }
-     
 .logo {
     display: block;
     width: 220px;
     height: 220px;
     object-fit: contain;
     margin: 20px auto;
-}
 }
