@@ -140,23 +140,18 @@ img {
 .botao-fechar {
     margin-top: 15px;
 }
-
 .botao-enviar {
     background-color: rgb(9, 127, 223);
 }
-
 .botao-fechar {
     background-color: rgb(100, 100, 100);
 }
-
 #mensagem-pedido {
     color: rgb(9, 127, 223);
     font-weight: bold;
     text-align: center;
 }
-/* ========================= */
 /* CELULAR */
-/* ========================= */
 @media (max-width: 700px) {
     ul {
         ul {
@@ -177,6 +172,7 @@ img {
         width: 240px;
     }
 }
+     
 .logo {
     display: block;
     width: 220px;
