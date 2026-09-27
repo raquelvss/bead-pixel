@@ -1,41 +1,27 @@
 <!DOCTYPE html>
-
 <html>
     <head>
         <link rel="stylesheet" href="styles.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
     <title>Bead Pixel</title>
 </head>
-
 <body>
     <img class="logo" src="Imagens/logo.png">
-
-    <h1 class="titulo-principal">Bead Pixel</h1>
-
     <h2 class="recepção">Bem-vindo(a) a minha loja virtual!</h2>
-
     <p>
         A Bead Pixel é uma loja que oferece uma ampla variedade de modelos
         de chaveiros feitos inteiramente de Hama Beads (material que compõe
         os chaveiros).
     </p>
-
     <h2>Nossos produtos:</h2>
-
     <ul>
-
         <li>
             Snoop (tamanho personalizável)
             <br>
-
             <img src="Imagens/Snoop.foto.jpeg">
             <br>
-
             <strong class="preco">R$5,00</strong>
             <br>
-
             <button onclick="abrirFormulario('Snoop personalizado', 'R$5,00')">
                 Fazer pedido
             </button>
@@ -43,19 +29,16 @@
         <li>
             Cinnamonroll (tamanho personalizável)
             <br>
-
             <img src="Imagens/Cinnamonroll.foto.jpeg">
             <br>
-
             <strong class="preco">R$5,00</strong>
             <br>
-
             <button onclick="abrirFormulario('Cinnamonroll personalizado', 'R$5,00')">
                 Fazer pedido
             </button>
         </li>
         <li>
-            Stitch (com tamanho personalizado)
+            Stitch (médio - grande))
             <br>
 
             <img src="Imagens/foto_stitch_AI.jpg">
@@ -86,7 +69,6 @@
         </li>
 
     </ul>
-
 
     <div id="formulario-pedido" class="formulario-escondido">
 
@@ -133,26 +115,16 @@
             >
                 Enviar pedido
             </button>
-
-
             <button
                 onclick="fecharFormulario()"
                 class="botao-fechar"
             >
                 Fechar
             </button>
-
-
             <p id="mensagem-pedido"></p>
-
         </div>
-
     </div>
-
-
     <script src="script.js"></script>
 
 </body>
-```
-
 </html>
