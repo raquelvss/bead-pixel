@@ -177,4 +177,11 @@ img {
         width: 240px;
     }
 }
+.logo {
+    display: block;
+    width: 220px;
+    height: 220px;
+    object-fit: contain;
+    margin: 20px auto;
+}
 }
