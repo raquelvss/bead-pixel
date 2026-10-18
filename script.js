@@ -80,8 +80,6 @@ function enviarPedido() {
 
     window.open(linkFormulario + dados, "_blank");
 }
-
-
 function fecharFormulario() {
     document.getElementById("formulario-pedido").classList.add("formulario-escondido");
 }
@@ -104,4 +102,50 @@ function escolherTamanhoStitch() {
     else if (tamanho !== null) {
         alert("Escolha 1 para Pequeno ou 2 para Médio.");
     }
+}
+function finalizarCarrinho() {
+
+    if (carrinho.length === 0) {
+        alert("Seu carrinho está vazio!");
+        return;
+    }
+
+    let resumoPedido = "";
+    let quantidadeTotal = 0;
+
+    carrinho.forEach(function(item) {
+
+        resumoPedido +=
+            item.produto +
+            " - Quantidade: " +
+            item.quantidade +
+            " | R$ " +
+            (item.preco * item.quantidade)
+                .toFixed(2)
+                .replace(".", ",") +
+            "\n";
+
+        quantidadeTotal += item.quantidade;
+    });
+
+    fecharCarrinho();
+
+    document
+        .getElementById("formulario-pedido")
+        .classList.remove("formulario-escondido");
+
+    document.getElementById("produto-escolhido").textContent =
+        "Pedido com " + quantidadeTotal + " item(ns)";
+
+    document.getElementById("quantidade").value =
+        quantidadeTotal;
+
+    document.getElementById("opcao-produto").innerHTML =
+        "<label>Produtos escolhidos:</label>" +
+        "<textarea id='resumo-carrinho' readonly></textarea>";
+
+    document.getElementById("resumo-carrinho").value =
+        resumoPedido;
+
+    document.getElementById("mensagem-pedido").textContent = "";
 }
