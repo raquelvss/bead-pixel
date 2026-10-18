@@ -85,3 +85,23 @@ function enviarPedido() {
 function fecharFormulario() {
     document.getElementById("formulario-pedido").classList.add("formulario-escondido");
 }
+function escolherTamanhoStitch() {
+    const tamanho = prompt(
+        "Qual tamanho do Stitch você deseja?\n\n" +
+        "Digite:\n" +
+        "1 - Pequeno (R$5,00)\n" +
+        "2 - Médio (R$8,00)"
+    );
+
+    if (tamanho === "1") {
+        adicionarAoCarrinho("Stitch - Pequeno", 5);
+    }
+
+    else if (tamanho === "2") {
+        adicionarAoCarrinho("Stitch - Médio", 8);
+    }
+
+    else if (tamanho !== null) {
+        alert("Escolha 1 para Pequeno ou 2 para Médio.");
+    }
+}
