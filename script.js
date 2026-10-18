@@ -559,4 +559,4 @@ function finalizarCarrinho() {
     document
         .getElementById("mensagem-pedido")
         .textContent = "";
-}
+
