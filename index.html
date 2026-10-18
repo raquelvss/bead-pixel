@@ -1,54 +1,93 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="styles.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bead Pixel</title>
 </head>
+
 <body>
+
+    <!-- TELA DE BOAS-VINDAS -->
     <div class="tela-boas-vindas">
         <h2>Bem-vindo à Bead Pixel! 💙</h2>
     </div>
+
+    <!-- LOGO -->
     <img class="logo" src="Imagens/logo.png">
-    <img class="banner" src="Imagens/Bem-vindo(a)!.png"
-    <h2 class="recepção">Bem-vindo(a) a minha loja virtual!</h2>
+
+    <!-- BANNER -->
+    <img class="banner" src="Imagens/Bem-vindo(a)!.png">
+
+    <!-- CARRINHO -->
+    <button class="botao-carrinho" onclick="abrirCarrinho()">
+        🛒 Carrinho (<span id="quantidade-carrinho">0</span>)
+    </button>
+
+    <h2 class="recepção">
+        Bem-vindo(a) a minha loja virtual!
+    </h2>
+
     <p>
         A Bead Pixel é uma loja que oferece uma ampla variedade de modelos
         de chaveiros feitos inteiramente de Hama Beads (material que compõe
         os chaveiros).
     </p>
+
     <h2>Nossos produtos:</h2>
+
     <ul>
+
+        <!-- SNOOP -->
         <li>
             Snoop (tamanho personalizável)
             <br>
+
             <img src="Imagens/Snoop.foto.jpeg">
+
             <br>
+
             <strong class="preco">R$5,00</strong>
+
             <br>
+
             <button onclick="abrirFormulario('Snoop personalizado', 'R$5,00')">
                 Fazer pedido
             </button>
         </li>
+
+
+        <!-- CINNAMONROLL -->
         <li>
             Cinnamonroll (tamanho personalizável)
             <br>
+
             <img src="Imagens/Cinnamonroll.foto.jpeg">
+
             <br>
+
             <strong class="preco">R$5,00</strong>
+
             <br>
+
             <button onclick="abrirFormulario('Cinnamonroll personalizado', 'R$5,00')">
                 Fazer pedido
             </button>
         </li>
+
+
+        <!-- STITCH -->
         <li>
-            Stitch (médio - grande))
+            Stitch (médio - grande)
             <br>
 
             <img src="Imagens/foto_stitch_AI.jpg">
+
             <br>
 
             <strong class="preco">R$5,00 - R$8,00</strong>
+
             <br>
 
             <button onclick="abrirFormulario('Stitch (com tamanho personalizável)', 'R$5,00 - R$8,00')">
@@ -57,14 +96,17 @@
         </li>
 
 
+        <!-- LAÇO -->
         <li>
             Laço (cores variadas)
             <br>
 
             <img src="Imagens/Laços.png">
+
             <br>
 
             <strong class="preco">R$5,00</strong>
+
             <br>
 
             <button onclick="abrirFormulario('Laço (cores variadas)', 'R$5,00')">
@@ -74,6 +116,8 @@
 
     </ul>
 
+
+    <!-- FORMULÁRIO DE PEDIDO -->
     <div id="formulario-pedido" class="formulario-escondido">
 
         <div class="caixa-formulario">
@@ -82,7 +126,6 @@
 
             <p id="produto-escolhido"></p>
 
-
             <label for="nome">Seu nome:</label>
 
             <input
@@ -90,7 +133,6 @@
                 id="nome"
                 placeholder="Digite seu nome"
             >
-
 
             <label for="quantidade">Quantidade:</label>
 
@@ -101,9 +143,7 @@
                 value="1"
             >
 
-
             <div id="opcao-produto"></div>
-
 
             <label for="observacao">Observações:</label>
 
@@ -112,23 +152,64 @@
                 placeholder="Escreva os detalhes do pedido"
             ></textarea>
 
-
             <button
                 onclick="enviarPedido()"
                 class="botao-enviar"
             >
                 Enviar pedido
             </button>
+
             <button
                 onclick="fecharFormulario()"
                 class="botao-fechar"
             >
                 Fechar
             </button>
+
             <p id="mensagem-pedido"></p>
+
         </div>
+
     </div>
+
+
+    <!-- JANELA DO CARRINHO -->
+    <div id="carrinho" class="carrinho-escondido">
+
+        <div class="caixa-carrinho">
+
+            <h2>Seu carrinho 🛒</h2>
+
+            <div id="itens-carrinho">
+                <p>Seu carrinho está vazio.</p>
+            </div>
+
+            <p class="total-carrinho">
+                Total:
+                <strong id="total-carrinho">R$ 0,00</strong>
+            </p>
+
+            <button
+                onclick="finalizarCarrinho()"
+                class="botao-enviar"
+            >
+                Finalizar pedido
+            </button>
+
+            <button
+                onclick="fecharCarrinho()"
+                class="botao-fechar"
+            >
+                Continuar comprando
+            </button>
+
+        </div>
+
+    </div>
+
+
     <script src="script.js"></script>
 
 </body>
+
 </html>
