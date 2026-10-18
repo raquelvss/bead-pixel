@@ -4,11 +4,6 @@ let precoSelecionado = "";
 let carrinho = [];
 let pedidoDoCarrinho = false;
 
-
-/* =========================
-   FORMULÁRIO INDIVIDUAL
-========================= */
-
 function abrirFormulario(produto, preco) {
 
     pedidoDoCarrinho = false;
@@ -487,48 +482,40 @@ function escolherTamanhoStitch() {
 ========================= */
 
 function finalizarCarrinho() {
-
     if (carrinho.length === 0) {
-
-        alert(
-            "Seu carrinho está vazio!"
-        );
-
+        alert("Seu carrinho está vazio!");
         return;
     }
 
-
-    pedidoDoCarrinho = true;
-
-
-    let resumoPedido = "";
-    let quantidadeTotal = 0;
-
+    let resumo = "";
+    let valorTotal = 0;
 
     carrinho.forEach(function(item) {
+        const subtotal = item.preco * item.quantidade;
 
-        resumoPedido +=
-
+        resumo +=
             item.produto +
-
-            " - Quantidade: " +
-
+            " × " +
             item.quantidade +
-
-            " | R$ " +
-
-            (item.preco * item.quantidade)
-                .toFixed(2)
-                .replace(".", ",") +
-
+            " — R$ " +
+            subtotal.toFixed(2).replace(".", ",") +
             "\n";
 
-
-        quantidadeTotal +=
-            item.quantidade;
+        valorTotal += subtotal;
     });
 
+    resumo +=
+        "\nTotal: R$ " +
+        valorTotal.toFixed(2).replace(".", ",");
 
+    document.getElementById("texto-resumo").value = resumo;
+
+    fecharCarrinho();
+
+    document
+        .getElementById("resumo-pedido")
+        .classList.add("resumo-aberto");
+}
     fecharCarrinho();
 
 
